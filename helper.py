@@ -84,7 +84,7 @@ def display_guardians(guardian_list):
     print("\nPlayer Guardians :")
     print(f"> {', '.join(guardian_list)}")
 
-def display_stats(team, team_str, num_player,
+def display_stats(team_str, team, num_player,
                   num_exp_player, num_not_exp_player,
                   avg_height, guardian_list):
     """
@@ -206,15 +206,13 @@ def get_guardians(name_list, player_list):
 
     return [guardian for player in player_list for guardian in player["guardians"] if player["name"] in name_list]
 
-def get_team_stats(team, team_str, clean_players):
+def get_team_stats(team, clean_players):
     """
     INPUT :
         team : list of player names
-        team_str : a string to display name of the team
         clean_players : list of cleaned PLAYERS
     RETURN : tuples
         team : list of player names
-        team_str : a string
         num_player : int, number of player in the team
         num_exp_player : int, number of experience player in the team
         num_not_exp_player: int, number of inexperience player in the team
@@ -230,4 +228,4 @@ def get_team_stats(team, team_str, clean_players):
     avg_height = average(height_list)
     guardian_list = get_guardians(team, clean_players)
 
-    return team, team_str, num_player, num_exp_player, num_not_exp_player, avg_height, guardian_list
+    return team, num_player, num_exp_player, num_not_exp_player, avg_height, guardian_list

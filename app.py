@@ -27,10 +27,10 @@ def start():
             team_str = f"Team: {team_name} Stats"
 
             # get team stats
-            stats = get_team_stats(team, team_str, clean_players)
+            stats = get_team_stats(team, clean_players)
 
             # display team stats
-            display_stats(*stats)
+            display_stats(team_str, *stats)
 
             input("\n\nPress ENTER to continue...\n")
 
