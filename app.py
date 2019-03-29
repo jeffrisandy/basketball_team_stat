@@ -1,4 +1,3 @@
-import random
 from constants import TEAMS, PLAYERS
 from helper import *
 
@@ -37,7 +36,7 @@ def start():
 
 
 if __name__ == '__main__':
-    # team names 
+    # team names
     team_names = TEAMS.copy()
 
     # clean PLAYER
